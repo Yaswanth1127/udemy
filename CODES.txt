@@ -1,0 +1,356 @@
+1.PRIME NUMBER 
+
+#include<iostream>
+using namespace std;
+int main(){
+     int n;
+     cin>>n;
+     
+     for (int i = 2; i <= n; i++) {
+        bool isPrime = true;
+        for (int j = 2; j*j <= i; j++) {
+            if (i % j == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime)
+            cout << i << " ";
+     }
+}
+
+    
+
+
+2.ARMSTRONG
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main(){
+    int n;
+    bool x=1;
+    bool y=0;
+    cin>>n;
+    int k=n;
+    int sum=0;
+    while(n>0){
+        int last_digit=n%10;
+        if(last_digit>=0){
+            sum=sum+pow(last_digit,3);
+        }
+        n=n/10;
+       
+    }
+    if(k==sum){
+        cout<<x;
+    }
+    else{
+        cout<<y;
+    }
+
+    
+
+    }
+
+3.FIZZBUZZ
+#include<iostream>
+using namespace std;
+int main(){
+    int n,i;
+    i=1;
+    cin>>n;
+    while(i<=n){
+         
+        if(i%3==0 && i%5!=0){
+            cout<<"Fizz ";
+        }
+        else if(i%5==0 && i%3!=0){
+            cout<<"Buzz ";
+        }
+        else if(i%3==0 && i%5==0){
+
+        cout<<"FizzBuzz ";
+        }
+        else{
+            cout<<i<<" ";
+         
+        }
+         i++;
+    }
+}
+
+4.LARGEST
+#include <iostream>
+#include<algorithm>
+using namespace std;
+
+int main(){
+    int n,temp;
+    cin>>n;
+    int arr[n];
+    for(int i=0; i<n;i++){
+        cin>>arr[i];
+
+    }
+     for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(arr[i]>arr[j]){
+             temp=arr[i];
+             arr[i]=arr[j];
+             arr[j]=temp;
+            }
+        }
+
+
+
+     }
+
+
+     cout<<arr[n-1];
+
+}
+
+
+5.ODD POSITION 
+#include<iostream>
+using namespace std;
+int main(){
+
+    int n,digit,position=1;
+    cin>>n;
+    int sum=0;
+    while(n!=0){
+        digit=n%10;
+
+
+        if( position%2!=0){
+            sum=sum+digit;
+
+        }
+        n=n/10;
+        position++;
+    }
+    cout<<sum;
+
+
+}
+
+
+6.PRIME 
+#include<iostream>
+using namespace std;
+int main(){
+    int n,flag;
+    int i;
+    cin>>n;
+    for(i=2;i<=n-1;i++){
+        if(n%i==0){
+            flag=0;
+            break;
+        }
+        else{
+            flag=1;
+        }
+    }
+    if(flag==1){
+        cout<<"prime";
+    }
+    else{
+        cout<<"not  a prime";
+    }
+
+
+
+
+}
+
+
+7. SUM OF ODD 
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int sum=0;
+    while(n>0){
+        int last_digit=n%10;
+        
+        if(last_digit%2!=0){
+        
+            sum=sum+last_digit;
+        }
+        n=n/10;
+    
+    }
+    cout<<sum;
+    return 0;
+}
+
+
+
+8.SUM OF NUMBERS 
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    int add=0;
+    cin>>n;
+    while(n>0){
+        int last_digit=n%10;
+        add= add+last_digit;
+        n=n/10;
+    }
+    cout<<add;
+    
+    return 0;
+
+}
+
+9.SUM OF ODD USING SORT
+#include <iostream>
+#include<algorithm>
+using namespace std;
+
+int main(){
+    int n,temp;
+    cin>>n;
+    int arr[n];
+    for(int i=0; i<n;i++){
+        cin>>arr[i];
+    }
+    sort(arr,arr+n,greater<int>());
+    cout<<arr[0];
+
+
+
+}
+
+
+10. SQUARE
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    cin>>N;
+     int square;
+   square=N*N;
+    cout<<square;
+    return 0;
+        // Read & Write using cin,cout
+        
+
+}
+
+
+11.LARGEST 
+#include <iostream>
+using namespace std;
+
+int largest (int n, int arr[])
+{
+    cin>>n;
+    int i;
+    for(i=0;i<=n;i++){
+        
+    }
+
+
+    
+    return 5;
+}
+
+
+12. FACTORIAL 
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int sum=1;
+    for(int i=1;i<=n;i++){
+        sum=sum*i;
+
+
+    }
+    cout<<sum;
+
+
+
+}
+
+13.EVEN 
+#include <iostream>
+using namespace std;
+
+
+int main() {
+    float p,t,r;
+    float SI;
+    
+    
+    cin>>p>>t;
+    if(t<=2){
+        cout<<SI=(p*t*5)/100;
+        
+    }
+    else{
+        cout<<si=(p*t*5)/100+(p*(t-2)*6)/100;
+    }
+    return 0;
+        // read and write using cin,cout 
+        // store the result in float datatype
+}
+
+
+
+14.ELECTRICITY
+
+#include<iostream>
+using namespace std;
+ 
+int main(){
+    int units;
+    cin>>units;
+    
+    if(units<=100){
+        
+        cout<< 0 <<endl;
+        
+    }
+    else if(units<=200){
+        cout<< 0+(units-100)*5<<endl;
+    }
+    else if(units<=300){
+        cout<<0+100*5+(units-200)*10<<endl;
+
+    }
+    else{
+        cout<<0+100*5+100*12+(units-300)*12<<endl;
+    }
+    return 0;
+
+     
+}
+
+
+
+15.AVERAGE
+
+#include<iostream>
+using namespace std;
+int main(){
+    int physics=90;
+    int che=68;
+    int math=75;
+    float avg=(physics+che+math)/3.0;
+    cout<<"Average Marks"<< avg <<endl;
+    return 0;
+
+}
+
+
+   
+
+

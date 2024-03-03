@@ -1,0 +1,131 @@
+1. FIBANOCCI
+
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    
+    int a=0,b=1,c;
+    cin>>n;
+    
+    for(int i=2;i<=n;i++){
+        c=a+b;
+       a=b;
+       b=c;
+    }
+    cout<<c;
+
+}
+
+
+2.NUMBER PATTERN 
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    
+    for(int i=1;i<=n;i++){
+       int val=i;
+        for(int cnt=1;cnt<=i;cnt++){
+            cout<<val;
+            val;
+             
+        }
+        cout<<endl;
+    }
+}
+
+
+3.PATTERN 1
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    int val=0;
+    cin>>n;
+    
+    for(int i=1;i<=n;i++){
+       int val=i;
+        for(int cnt=1;cnt<=i;cnt++){
+            cout<<val;
+            val++;
+             
+        }
+        cout<<endl;
+    }
+}
+
+
+4.PATTERN 2
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    int val=0;
+    cin>>n;
+    
+    for(int i=1;i<=n;i++){
+       int val=i;
+        for(int cnt=1;cnt<=i;cnt++){
+            cout<<val;
+            val++;
+             
+        }
+        cout<<endl;
+    }
+}
+
+
+5. PYRAMID
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    for(int i=1;i<=n;i++){
+        for(int cnt=1;cnt<=n-i;cnt++){
+            cout<<" ";
+        }
+       int val=i;
+        for(int cnt=1;cnt<=i;cnt++){
+            cout<<val;
+            val++;
+             
+        }
+        val=val-2;
+        for(int cnt=1;cnt<=i-1;cnt++){
+            cout<<val;
+            val--;
+        }
+        cout<<endl;
+    }
+
+
+
+
+
+    return 0;
+} 
+
+
+6.STAR PATTERN 
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    for(int i=1; i<=n; i++){
+        for(int spaces=1; spaces<=n+i; spaces++){
+            cout<<" ";
+        }
+        for(int stars=1; stars<=2*i-1; stars++){
+            cout<<"*";
+        }
+        cout<<endl;
+
+    }
+    return 0;
+}
+
